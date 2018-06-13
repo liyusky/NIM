@@ -18,7 +18,7 @@
           </div>
           <div class="header-search">
             <span class="search-icon"></span>
-            <input class="search-input" id="search-input" type="text" placeholder="搜索">
+            <input v-model="searchText" class="search-input" id="search-input" type="text" placeholder="搜索" @input="searchContact">
           </div>
         </header>
         <!-- e header -->
@@ -28,7 +28,7 @@
           <div class="section-tab">
             <div class="tab-item" @click="messageTab">
               <img :src="msgImg">
-              <div class="item-badge" :class="{active:!imgOnoff}">
+              <div class="item-badge" :class="{show:!imgOnoff}">
                 <div class="badge-bottom">
                   <b class="badge-top">
                     <i class="top-arrow-first"></i>
@@ -39,7 +39,7 @@
             </div>
             <div class="tab-item" @click="contactTab">
               <img :src="contactImg">
-              <div class="item-badge" :class="{active:imgOnoff}">
+              <div class="item-badge" :class="{show:imgOnoff}">
                 <div class="badge-bottom">
                   <b class="badge-top">
                     <i class="top-arrow-first"></i>
@@ -53,7 +53,7 @@
           <!-- s section-panel -->
           <div class="section-panel">
             <!-- s panel-message -->
-            <div class="panel-message" :class="{active:!imgOnoff}">
+            <div class="panel-message" :class="{show:!imgOnoff}">
               <div class="message-item">
                 <img src="../../static/img/notice.png">
                 <span>消息中心</span>
@@ -62,13 +62,25 @@
                 <img src="../../static/img/addFriend.png">
                 <span>添加好友</span>
               </div>
-              <div class="message-accept">
-                <span class="message-no-contact">暂无最近联系人哦</span>
+              <div v-show="messageShow" class="message-accept">
+                <div class="accept-item">
+                  <img class="item-portrait" src="../../static/img/default-icon.png">
+                  <div class="item-detail">
+                    <p class="detail-title">
+                      <span class="title-username">用户名字</span>
+                      <span class="title-time">一天前</span>
+                    </p>
+                    <p class="detail-news">
+                      <span class="news-content">hello</span>
+                    </p>
+                  </div>
+                </div>
               </div>
+              <div v-show="!messageShow" class="message-no-contact">暂无最近联系人哦</div>
             </div>
             <!-- e panel-message -->
             <!-- s panel-message -->
-            <div class="panel-contact" :class="{active:imgOnoff}">
+            <div class="panel-contact" :class="{show:imgOnoff}">
               <div class="contact-blacklist">
                 <img src="../../static/img/black.png">
                 <span class="blacklist-text">黑名单</span>
@@ -88,13 +100,11 @@
       </div>
     </div>
     <!-- e container -->
-    <shade v-show="shadeShow"></shade>
     <information v-show="informationShow" @closeInformation="closeInfor"></information>
   </div>
   <!-- e home -->
 </template>
 <script>
-  import shade from '@/components/common/shade/shade'
   import information from '@/components/common/information/information'
   export default {
     name: 'index',
@@ -104,7 +114,9 @@
         contactImg: '../../static/img/tab04.png',
         imgOnoff: true,
         informationShow: false,
-        shadeShow: false
+        shadeShow: false,
+        searchText:'',
+        messageShow:true
       }
     },
     methods: {
@@ -122,6 +134,7 @@
           this.msgImg = '../../static/img/tab03.png';
         }
       },
+      // 打开关闭修个个人信息面板
       closeInfor() {
         this.shadeShow = false;
         this.informationShow = false;
@@ -129,10 +142,13 @@
       openInformation() {
         this.informationShow = true;
         this.shadeShow = true;
-      }
+      },
+      // 搜索联系人
+      searchContact(){
+        
+      },
     },
     components: {
-      shade,
       information
     }
   }

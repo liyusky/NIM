@@ -1,21 +1,20 @@
-@charset "UTF-8";
 .home {
   position: relative;
   width: 100vw;
   height: 100vh;
 }
 
-.bg-image {
+.home .bg-image {
   height: 100%;
   width: 100%;
 }
 
-.bg-image img {
+.home .bg-image img {
   height: 100%;
   width: 100%;
 }
 
-.home-container {
+.home .home-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -23,17 +22,19 @@
   height: 100%;
 }
 
-.home-content {
+.home .home-container .home-content {
   width: 260px;
   height: 650px;
   margin-top: 100px;
+  margin-right: 0;
+  margin-bottom: 0;
   margin-left: 100px;
   border: 1px solid #000;
   border-radius: 5px;
   background: #fff;
 }
 
-.header {
+.home .home-container .home-content .header {
   width: 100%;
   height: 110px;
   border-top-left-radius: 5px;
@@ -41,41 +42,46 @@
   background: #e5f4ff;
 }
 
-.header .header-title {
+.home .home-container .home-content .header .header-title {
   width: 100%;
   height: 80px;
   line-height: 80px;
 }
 
-.header .header-title .title-portrait {
+.home .home-container .home-content .header .header-title .title-portrait {
   height: 56px;
   width: 56px;
-  margin-left: 14px;
   margin-top: 10px;
   margin-right: 10px;
+  margin-bottom: 0;
+  margin-left: 14px;
 }
 
-.header .header-title .title-username {
+.home .home-container .home-content .header .header-title .title-username {
   line-height: 80px;
   color: #666;
   font-size: 12px;
 }
 
-.header .header-title .title-update {
+.home .home-container .home-content .header .header-title .title-update {
   margin-top: 33px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
 }
 
-.header .header-search {
+.home .home-container .home-content .header .header-search {
   width: 248px;
   height: 24px;
-  margin-left: 6px;
+  margin-top: 0;
   margin-right: 6px;
   margin-bottom: 6px;
+  margin-left: 6px;
   border: 1px solid #1bb8f9;
   box-sizing: border-box;
 }
 
-.header .search-icon {
+.home .home-container .home-content .header .search-icon {
   display: inline-block;
   float: left;
   width: 30px;
@@ -86,7 +92,7 @@
   font-weight: normal;
 }
 
-.header .search-input {
+.home .home-container .home-content .header .search-input {
   float: left;
   width: 216px;
   height: 22px;
@@ -97,22 +103,22 @@
   font-size: 12px;
 }
 
-.section {
+.home .home-container .home-content .section {
   width: 100%;
 }
 
-.section .active {
+.home .home-container .home-content .section .show {
   display: none;
 }
 
-.section .section-tab {
+.home .home-container .home-content .section .section-tab {
   width: 100%;
   height: 34px;
   border-bottom: 1px solid #ced4d9;
   border-top: 1px solid #ced4d9;
 }
 
-.section .section-tab .tab-item {
+.home .home-container .home-content .section .section-tab .tab-item {
   display: inline-block;
   position: relative;
   width: 49%;
@@ -121,34 +127,36 @@
   line-height: 34px;
 }
 
-.section .section-tab .tab-item img {
+.home .home-container .home-content .section .section-tab .tab-item img {
   width: 16px;
   height: 16px;
   margin-top: 5px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
 }
 
-.section .section-tab .tab-item .item-badge {
+.home .home-container .home-content .section .section-tab .tab-item .item-badge {
   position: absolute;
   bottom: 0;
   left: 50%;
 }
 
-.section .section-tab .tab-item .item-badge .badge-bottom {
+.home .home-container .home-content .section .section-tab .tab-item .item-badge .badge-bottom {
   position: relative;
 }
 
-.section .section-tab .tab-item .item-badge .badge-bottom .badge-top {
-  width: 14px;
-  height: 14px;
+.home .home-container .home-content .section .section-tab .tab-item .item-badge .badge-bottom .badge-top {
   position: absolute;
   left: -7px;
   top: -12px;
   z-index: 2;
-  /*兼容ie8-*/
+  width: 14px;
+  height: 14px;
 }
 
-.section .section-tab .tab-item .item-badge .badge-bottom .top-arrow-first,
-.section .section-tab .tab-item .item-badge .badge-bottom .top-arrow-second {
+.home .home-container .home-content .section .section-tab .tab-item .item-badge .badge-bottom .top-arrow-first,
+.home .home-container .home-content .section .section-tab .tab-item .item-badge .badge-bottom .top-arrow-second {
   width: 0;
   height: 0;
   display: block;
@@ -156,31 +164,31 @@
   left: 0;
   top: 0;
   z-index: 5;
-  /*兼容ie8-*/
   border-top: 6px transparent dashed;
-  border-left: 6px transparent dashed;
   border-right: 6px transparent dashed;
+  border-bottom: 0 transparent dashed;
+  border-left: 6px transparent dashed;
   overflow: hidden;
 }
 
-.section .section-tab .tab-item .item-badge .badge-bottom .top-arrow-first {
+.home .home-container .home-content .section .section-tab .tab-item .item-badge .badge-bottom .top-arrow-first {
   border-bottom: 6px #ced4d9 solid;
 }
 
-.section .section-tab .tab-item .item-badge .badge-bottom .top-arrow-second {
+.home .home-container .home-content .section .section-tab .tab-item .item-badge .badge-bottom .top-arrow-second {
   top: 1px;
   border-bottom: 6px white solid;
 }
 
-.section .section-panel {
+.home .home-container .home-content .section .section-panel {
   width: 100%;
 }
 
-.section .section-panel .panel-message {
+.home .home-container .home-content .section .section-panel .panel-message {
   width: 100%;
 }
 
-.section .section-panel .panel-message .message-item {
+.home .home-container .home-content .section .section-panel .panel-message .message-item {
   height: 57px;
   padding: 8px 10px;
   border-bottom: 1px solid #eaeeef;
@@ -189,14 +197,17 @@
   cursor: pointer;
 }
 
-.section .section-panel .panel-message .message-item img {
+.home .home-container .home-content .section .section-panel .panel-message .message-item img {
   width: 40px;
   height: 40px;
   vertical-align: top;
 }
 
-.section .section-panel .panel-message .message-item span {
+.home .home-container .home-content .section .section-panel .panel-message .message-item span {
   height: 40px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
   margin-left: 20px;
   line-height: 40px;
   color: #3a4a59;
@@ -206,21 +217,89 @@
   white-space: nowrap;
 }
 
-.section .section-panel .panel-message .message-accept {
+.home .home-container .home-content .section .section-panel .panel-message .message-accept {
   width: 100%;
 }
 
-.section .section-panel .panel-message .message-accept .message-no-contact {
+.home .home-container .home-content .section .section-panel .panel-message .message-accept .accept-item {
+  height: 57px;
+  padding: 8px 10px;
+  border-bottom: 1px solid #eaeeef;
+  overflow: hidden;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.home .home-container .home-content .section .section-panel .panel-message .message-accept .accept-item .item-portrait {
+  float: left;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  vertical-align: top;
+}
+
+.home .home-container .home-content .section .section-panel .panel-message .message-accept .accept-item .item-detail {
+  position: relative;
+  height: 100%;
+  margin: 0 0 0 60px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: white;
+}
+
+.home .home-container .home-content .section .section-panel .panel-message .message-accept .accept-item .item-detail .detail-title {
+  height: 20px;
+  line-height: 20px;
+}
+
+.home .home-container .home-content .section .section-panel .panel-message .message-accept .accept-item .item-detail .detail-title .title-username {
+  display: inline-block;
+  width: 60%;
+  line-height: 20px;
+  font-size: 14px;
+  color: #3a4a59;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.home .home-container .home-content .section .section-panel .panel-message .message-accept .accept-item .item-detail .detail-title .title-time {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #999;
+}
+
+.home .home-container .home-content .section .section-panel .panel-message .message-accept .accept-item .item-detail .detail-news {
+  height: 20px;
+  line-height: 20px;
+}
+
+.home .home-container .home-content .section .section-panel .panel-message .message-accept .accept-item .item-detail .detail-news .news-content {
+  display: inline-block;
+  width: 60%;
+  line-height: 20px;
+  font-size: 14px;
+  color: #8899a7;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.home .home-container .home-content .section .section-panel .panel-message .message-no-contact {
   font-size: 12px;
   color: #3a4a59;
 }
 
-.section .panel-contact {
+.home .home-container .home-content .section .panel-contact {
   width: 100%;
 }
 
-.section .panel-contact .contact-blacklist {
+.home .home-container .home-content .section .panel-contact .contact-blacklist {
   height: 57px;
+  line-height: 37px;
   padding: 8px 10px;
   border-bottom: 1px solid #eaeeef;
   overflow: hidden;
@@ -228,22 +307,26 @@
   cursor: pointer;
 }
 
-.section .panel-contact .contact-blacklist img {
+.home .home-container .home-content .section .panel-contact .contact-blacklist img {
   width: 40px;
   height: 40px;
 }
 
-.section .panel-contact .contact-blacklist .blacklist-text {
+.home .home-container .home-content .section .panel-contact .contact-blacklist .blacklist-text {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
   margin-left: 20px;
 }
 
-.section .panel-contact .contact-list {
+.home .home-container .home-content .section .panel-contact .contact-list {
   overflow: auto;
   width: 100%;
 }
 
-.section .panel-contact .contact-list .contact-item {
+.home .home-container .home-content .section .panel-contact .contact-list .contact-item {
   height: 57px;
+  line-height: 37px;
   padding: 8px 10px;
   border-bottom: 1px solid #eaeeef;
   overflow: hidden;
@@ -251,12 +334,15 @@
   cursor: pointer;
 }
 
-.section .panel-contact .contact-list .contact-item img {
+.home .home-container .home-content .section .panel-contact .contact-list .contact-item img {
   height: 40px;
   width: 40px;
 }
 
-.section .panel-contact .contact-list .contact-item .contact-item-name {
+.home .home-container .home-content .section .panel-contact .contact-list .contact-item .contact-item-name {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
   margin-left: 20px;
   font-size: 12px;
   color: #3a4a59;
