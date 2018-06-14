@@ -101,11 +101,13 @@
     </div>
     <!-- e container -->
     <information v-show="informationShow" @closeInformation="closeInfor"></information>
+    <chatroom></chatroom>
   </div>
   <!-- e home -->
 </template>
 <script>
   import information from '@/components/common/information/information'
+  import chatroom from '@/components/common/chat-room/chat-room'
   export default {
     name: 'index',
     data() {
@@ -149,7 +151,8 @@
       },
     },
     components: {
-      information
+      information,
+      chatroom
     }
   }
 

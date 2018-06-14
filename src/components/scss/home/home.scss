@@ -4,12 +4,16 @@
   margin-bottom: $size3;
   margin-left: $size4;
 }
-
 @mixin border-width ($size1, $size2, $size3, $size4) {
   border-top: $size1 transparent dashed;
   border-right: $size2 transparent dashed;
   border-bottom: $size3 transparent dashed;
   border-left: $size4 transparent dashed;
+}
+@mixin hover {
+  &:hover{
+    background-color: #f5f5f5;
+  }
 }
 
 .home {
@@ -69,7 +73,6 @@
           box-sizing: border-box;
         }
         .search-icon {
-          display: inline-block;
           float: left;
           width: 30px;
           height: 22px;
@@ -158,6 +161,7 @@
               border-bottom: 1px solid #eaeeef;
               overflow: hidden;
               box-sizing: border-box;
+              @include hover();
               cursor: pointer;
               img {
                 width: 40px;
@@ -183,6 +187,7 @@
                 border-bottom: 1px solid #eaeeef;
                 overflow: hidden;
                 box-sizing: border-box;
+                @include hover();
                 cursor: pointer;
                 .item-portrait {
                   float: left;
@@ -197,7 +202,7 @@
                   margin: 0 0 0 60px;
                   box-sizing: border-box;
                   overflow: hidden;
-                  background-color: white;
+                  background-color: transparent;
                   .detail-title {
                     height: 20px;
                     line-height: 20px;
@@ -252,6 +257,7 @@
             border-bottom: 1px solid #eaeeef;
             overflow: hidden;
             box-sizing: border-box;
+            @include hover();
             cursor: pointer;
             img {
               width: 40px;
@@ -271,6 +277,7 @@
               border-bottom: 1px solid #eaeeef;
               overflow: hidden;
               box-sizing: border-box;
+              @include hover();
               cursor: pointer;
               img {
                 height: 40px;
