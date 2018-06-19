@@ -232,6 +232,127 @@
   border-left: 0 transparent dashed;
 }
 
+.chat-room .room-content .content-panel .panel-history {
+  width: 100%;
+}
+
+.chat-room .room-content .content-panel .panel-history .history-more-records {
+  width: 100%;
+  height: 13px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.chat-room .room-content .content-panel .panel-history .history-more-records span {
+  padding: 3px 15px;
+  background-color: #e5f4ff;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #6b8299;
+}
+
+.chat-room .room-content .content-panel .panel-history .history-time {
+  text-align: center;
+  font-size: 12px;
+  color: #aaaaaa;
+  line-height: 30px;
+}
+
+.chat-room .room-content .content-panel .panel-history .history-mine {
+  overflow: hidden;
+  padding-top: 4px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+}
+
+.chat-room .room-content .content-panel .panel-history .history-mine img {
+  float: right;
+  width: 40px;
+  height: 40px;
+}
+
+.chat-room .room-content .content-panel .panel-history .history-mine .mine-message {
+  float: right;
+  position: relative;
+  padding-top: 7px;
+  padding-right: 12px;
+  padding-bottom: 7px;
+  padding-left: 12px;
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-bottom: 0;
+  margin-left: 0;
+  border-radius: 8px;
+  color: #fff;
+  background: #5cacde;
+}
+
+.chat-room .room-content .content-panel .panel-history .history-mine .mine-message::after {
+  content: ' ';
+  position: absolute;
+  top: 11px;
+  left: 100%;
+  width: 0px;
+  height: 0px;
+  border-top: 5px transparent dashed;
+  border-right: 0 transparent dashed;
+  border-bottom: 5px transparent dashed;
+  border-left: 5px transparent dashed;
+}
+
+.chat-room .room-content .content-panel .panel-history .history-opposite {
+  overflow: hidden;
+  padding-top: 4px;
+  padding-right: 0;
+  padding-bottom: 10px;
+  padding-left: 0;
+}
+
+.chat-room .room-content .content-panel .panel-history .history-opposite img {
+  float: left;
+  width: 40px;
+  height: 40px;
+}
+
+.chat-room .room-content .content-panel .panel-history .history-opposite .opposite-message {
+  float: left;
+  position: relative;
+  padding-top: 7px;
+  padding-right: 12px;
+  padding-bottom: 7px;
+  padding-left: 12px;
+  margin-top: 5px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 10px;
+  border-radius: 8px;
+  color: #6b8299;
+  background: #eaeeef;
+}
+
+.chat-room .room-content .content-panel .panel-history .history-opposite .opposite-message::after {
+  content: ' ';
+  position: absolute;
+  top: 11px;
+  right: 100%;
+  width: 0px;
+  height: 0px;
+  border-top: 5px transparent dashed;
+  border-right: 5px transparent dashed;
+  border-bottom: 5px transparent dashed;
+  border-left: 0 transparent dashed;
+}
+
+.chat-room .room-content .content-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-room .room-content .content-panel::-webkit-scrollbar-thumb {
+  background-color: #8899A7;
+  border-radius: 3px;
+}
+
 .chat-room .room-content .content-send {
   position: absolute;
   bottom: 0;
@@ -258,6 +379,7 @@
   position: relative;
   margin-right: 2px;
   margin-top: 15px;
+  cursor: pointer;
 }
 
 .chat-room .room-content .content-send .send-expression {
@@ -278,6 +400,7 @@
 
 .chat-room .room-content .content-send .send-message {
   float: left;
+  position: relative;
   width: 460px;
   margin-top: -5px;
   margin-right: 0;
@@ -299,6 +422,38 @@
   background: #fff;
   border: 1px solid #ccc;
   resize: none;
+}
+
+.chat-room .room-content .content-send .send-message .message-marked-list {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  width: 460px;
+  height: 120px;
+  background: #e5f4ff;
+  overflow-y: auto;
+  border-radius: 0 0 5px 5px;
+}
+
+.chat-room .room-content .content-send .send-message .message-marked-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-room .room-content .content-send .send-message .message-marked-list::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.chat-room .room-content .content-send .send-message .message-marked-list .item {
+  height: 25px;
+  line-height: 25px;
+  padding-left: 20px;
+  font-size: 12px;
+  color: #666;
+}
+
+.chat-room .room-content .content-send .send-message .message-marked-list .item:hover {
+  background: #eaeeef;
 }
 
 .chat-room .room-content .content-send .send-button {

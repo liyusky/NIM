@@ -11,23 +11,38 @@
             <span class="title-login-status">[离线]</span>
           </div>
         </div>
-        <div class="header-record">
+        <div class="header-record" @click="showRecordEvent">
           <img src="../../../../static/img/recode.png">
           <p class="record-title">云记录</p>
         </div>
       </div>
       <div v-show="headerShow" class="content-header-hide">
-        <div class="hide-button">返回</div>
+        <div class="hide-button" @click="closeRecordEvent">返回</div>
         <p>云记录</p>
       </div>
       <section class="content-panel">
-        <div class="panel-record">
+        <div v-show="!headerShow" class="panel-record">
           <p class="record-time">- - - - 10:06 - - - -</p>
           <div class="record-mine">
             <img src="../../../../static/img/default-icon.png">
             <p class="mine-message">hello</p>
           </div>
+          <p class="record-time">- - - - 11:06 - - - -</p>
           <div class="record-opposite">
+            <img src="../../../../static/img/default-icon.png">
+            <p class="opposite-message">hello</p>
+          </div>
+        </div>
+        <div v-show="headerShow" class="panel-history">
+          <div class="history-more-records">
+            <span>没有更早的聊天记录了</span>
+          </div>
+          <p class="history-time">- - - - 10:06 - - - -</p>
+          <div class="history-mine">
+            <img src="../../../../static/img/default-icon.png">
+            <p class="mine-message">hello</p>
+          </div>
+          <div class="history-opposite">
             <img src="../../../../static/img/default-icon.png">
             <p class="opposite-message">hello</p>
           </div>
@@ -42,18 +57,28 @@
         <div class="send-picture">
 
         </div>
-        <div class="send-telephone">
+        <div class="send-telephone" @click="videoSelectEvent">
 
         </div>
-        <div class="send-video">
+        <div class="send-video" @click="videoSelectEvent">
 
         </div>
         <div class="send-message">
-          <textarea class="message-text" name="message" id="message" rows="1" maxlength="500"></textarea>
+          <textarea class="message-text" name="message" id="message" rows="1" maxlength="500" @blur="blurEvent" @click="clickEvent"></textarea>
+          <ul v-show="markedShow" class="message-marked-list">
+            <li class="item">你好，在吗！</li>
+            <li class="item">晚安！</li>
+            <li class="item">再见！</li>
+            <li class="item">吃饭了吗！</li>
+            <li class="item">拜拜！</li>
+            <li class="item">拜拜！</li>
+            <li class="item">拜拜！</li>
+          </ul>
         </div>
         <div class="send-button">
           <span>发送</span>
         </div>
+        <selectTechnology v-show="videoSelectShow" @closeSelectEvent="closeSelect" :videoSelectShow="videoSelectShow"></selectTechnology>
       </footer>
     </div>
     <div class="room-reports">
@@ -70,15 +95,38 @@
   </div>
 </template>
 <script>
+  import selectTechnology from '@/components/common/select-technology/select-technology.vue'
   export default {
     data() {
       return {
-        headerShow: false
+        headerShow: false,
+        videoSelectShow: false,
+        markedShow: false
       }
     },
     methods: {
-
+      showRecordEvent() {
+        this.headerShow = true;
+      },
+      closeRecordEvent() {
+        this.headerShow = false;
+      },
+      videoSelectEvent() {
+        this.videoSelectShow = true;
+      },
+      closeSelect() {
+        this.videoSelectShow = false;
+      },
+      blurEvent() {
+        this.markedShow = false;
+      },
+      clickEvent() {
+        this.markedShow = !this.markedShow;
+      },
     },
+    components: {
+      selectTechnology
+    }
   }
 
 </script>
