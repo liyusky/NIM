@@ -34,7 +34,7 @@
           </p>
           <div v-show="radioShow" class="pc-switch" @click="switchEvent">
             <div class="switch-radio" :class="{showSwitch:switchShow}">
-              <i ></i>
+              <i></i>
             </div>
             <p>WebRTC兼容开关(如果被叫方使用WebRTC，请打开此开关。否则不建议打开此开关，会影响通话质量。)</p>
           </div>

@@ -26,8 +26,6 @@
   width: 260px;
   height: 650px;
   margin-top: 100px;
-  margin-right: 0;
-  margin-bottom: 0;
   margin-left: 100px;
   border: 1px solid #000;
   border-radius: 5px;
@@ -52,9 +50,8 @@
   height: 56px;
   width: 56px;
   margin-top: 10px;
+  margin-left: 10px;
   margin-right: 10px;
-  margin-bottom: 0;
-  margin-left: 14px;
 }
 
 .home .home-container .home-content .header .header-title .title-username {
@@ -65,18 +62,14 @@
 
 .home .home-container .home-content .header .header-title .title-update {
   margin-top: 33px;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
 }
 
 .home .home-container .home-content .header .header-search {
   width: 248px;
   height: 24px;
-  margin-top: 0;
   margin-right: 6px;
   margin-bottom: 6px;
-  margin-left: 6px;
+  margin-right: 6px;
   border: 1px solid #1bb8f9;
   box-sizing: border-box;
 }
@@ -130,9 +123,6 @@
   width: 16px;
   height: 16px;
   margin-top: 5px;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
 }
 
 .home .home-container .home-content .section .section-tab .tab-item .item-badge {
@@ -208,9 +198,6 @@
 
 .home .home-container .home-content .section .section-panel .panel-message .message-item span {
   height: 40px;
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0;
   margin-left: 20px;
   line-height: 40px;
   color: #3a4a59;
@@ -324,9 +311,6 @@
 }
 
 .home .home-container .home-content .section .panel-contact .contact-blacklist .blacklist-text {
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0;
   margin-left: 20px;
 }
 
@@ -355,9 +339,6 @@
 }
 
 .home .home-container .home-content .section .panel-contact .contact-list .contact-item .contact-item-name {
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0;
   margin-left: 20px;
   font-size: 12px;
   color: #3a4a59;

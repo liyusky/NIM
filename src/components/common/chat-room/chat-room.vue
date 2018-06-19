@@ -101,7 +101,7 @@
       return {
         headerShow: false,
         videoSelectShow: false,
-        markedShow:false
+        markedShow: false
       }
     },
     methods: {
@@ -114,14 +114,14 @@
       videoSelectEvent() {
         this.videoSelectShow = true;
       },
-      closeSelect(){
-        this.videoSelectShow=false;
+      closeSelect() {
+        this.videoSelectShow = false;
       },
-      blurEvent(){
-        this.markedShow=false;
+      blurEvent() {
+        this.markedShow = false;
       },
-      clickEvent(){
-        this.markedShow= !this.markedShow;
+      clickEvent() {
+        this.markedShow = !this.markedShow;
       },
     },
     components: {
