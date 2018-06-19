@@ -18,7 +18,9 @@
     .information-header {
       position: relative;
       padding: 30px;
-      border-bottom: 1px solid #e4e9ee;
+      border: {
+        bottom: 1px solid #e4e9ee;
+      }
       .header-portrait {
         float: left;
         width: 80px;
@@ -31,8 +33,12 @@
       }
       .header-content {
         float: left;
-        padding-top: 10px;
-        margin-left: 15px;
+        padding: {
+          top: 10px;
+        }
+        margin: {
+          left: 15px;
+        }
         .header-name {
           font-size: 14px;
           color: #3a4a59;
@@ -56,7 +62,12 @@
     }
     .section {
       position: relative;
-      padding: 30px;
+      padding: {
+        top: 30px;
+        right: 30px;
+        bottom: 30px;
+        left: 30px;
+      }
       height: 190px;
       .section-detail {
         height: 16px;
@@ -67,11 +78,16 @@
       .detail-list {
         .list-item {
           position: relative;
-          padding-left: 50px;
+          padding: {
+            top: 4px;
+            bottom: 4px;
+            left: 50px;
+          }
           height: 22px;
           line-height: 14px;
-          padding: 4px 0 4px 0px;
-          margin-top: 10px;
+          margin: {
+            top: 10px;
+          }
           font-size: 14px;
         }
       }

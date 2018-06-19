@@ -32,7 +32,7 @@
           <p class="pc-content">
             PC Agent是一种插件方案，核心在于需要在本地安装一个音视频插件，优点是支持的浏览器较多，包括Chrome55以上，IE11和Edge最新版本。缺点是只支持Windows系统且需要安装插件。
           </p>
-          <div v-show="radioShow" class="pc-switch" @click="switchEvent">
+          <div  class="pc-switch" v-show="radioShow" @click="switchEvent" >
             <div class="switch-radio" :class="{showSwitch:switchShow}">
               <i></i>
             </div>
@@ -42,7 +42,7 @@
       </div>
 
       <div class="content-sure">
-        <div class="sure-button">确定</div>
+        <button class="sure-button">确定</button>
       </div>
     </div>
   </div>

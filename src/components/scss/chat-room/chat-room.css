@@ -37,7 +37,6 @@
   height: 56px;
   margin-top: 12px;
   margin-right: 10px;
-  margin-bottom: 0;
   margin-left: 14px;
   border: none;
   cursor: pointer;
@@ -81,7 +80,10 @@
   display: block;
   width: 16px;
   height: 16px;
-  margin: 0 auto;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
 }
 
 .chat-room .room-content .content-header .header-record .record-title {
@@ -129,9 +131,9 @@
   height: 480px;
   overflow-y: auto;
   padding-top: 10px;
-  padding-right: 3%;
   padding-bottom: 10px;
   padding-left: 3%;
+  padding-right: 3%;
   box-sizing: border-box;
 }
 
@@ -149,9 +151,7 @@
 .chat-room .room-content .content-panel .panel-record .record-mine {
   overflow: hidden;
   padding-top: 4px;
-  padding-right: 0px;
   padding-bottom: 10px;
-  padding-left: 0px;
 }
 
 .chat-room .room-content .content-panel .panel-record .record-mine img {
@@ -169,8 +169,6 @@
   padding-left: 12px;
   margin-top: 5px;
   margin-right: 10px;
-  margin-bottom: 0;
-  margin-left: 0;
   border-radius: 8px;
   color: #fff;
   background: #5cacde;
@@ -183,18 +181,16 @@
   left: 100%;
   width: 0px;
   height: 0px;
-  border-top: 5px transparent dashed;
-  border-right: 0 transparent dashed;
-  border-bottom: 5px transparent dashed;
-  border-left: 5px transparent dashed;
+  border-top: 5px transparent solid;
+  border-right: 5px transparent solid;
+  border-bottom: 5px transparent solid;
+  border-left: 5px #5cacde solid;
 }
 
 .chat-room .room-content .content-panel .panel-record .record-opposite {
   overflow: hidden;
   padding-top: 4px;
-  padding-right: 0;
   padding-bottom: 10px;
-  padding-left: 0;
 }
 
 .chat-room .room-content .content-panel .panel-record .record-opposite img {
@@ -211,8 +207,6 @@
   padding-bottom: 7px;
   padding-left: 12px;
   margin-top: 5px;
-  margin-right: 0;
-  margin-bottom: 0;
   margin-left: 10px;
   border-radius: 8px;
   color: #6b8299;
@@ -226,10 +220,10 @@
   right: 100%;
   width: 0px;
   height: 0px;
-  border-top: 5px transparent dashed;
-  border-right: 5px transparent dashed;
-  border-bottom: 5px transparent dashed;
-  border-left: 0 transparent dashed;
+  border-top: 5px transparent solid;
+  border-right: 5px #eaeeef solid;
+  border-bottom: 5px transparent solid;
+  border-left: 5px transparent solid;
 }
 
 .chat-room .room-content .content-panel .panel-history {
@@ -244,7 +238,10 @@
 }
 
 .chat-room .room-content .content-panel .panel-history .history-more-records span {
-  padding: 3px 15px;
+  padding-top: 3px;
+  padding-right: 15px;
+  padding-bottom: 3px;
+  padding-left: 15px;
   background-color: #e5f4ff;
   border-radius: 5px;
   font-size: 12px;
@@ -261,9 +258,7 @@
 .chat-room .room-content .content-panel .panel-history .history-mine {
   overflow: hidden;
   padding-top: 4px;
-  padding-right: 0px;
   padding-bottom: 10px;
-  padding-left: 0px;
 }
 
 .chat-room .room-content .content-panel .panel-history .history-mine img {
@@ -281,8 +276,6 @@
   padding-left: 12px;
   margin-top: 5px;
   margin-right: 10px;
-  margin-bottom: 0;
-  margin-left: 0;
   border-radius: 8px;
   color: #fff;
   background: #5cacde;
@@ -295,18 +288,16 @@
   left: 100%;
   width: 0px;
   height: 0px;
-  border-top: 5px transparent dashed;
-  border-right: 0 transparent dashed;
-  border-bottom: 5px transparent dashed;
-  border-left: 5px transparent dashed;
+  border-top: 5px transparent solid;
+  border-right: 5px transparent solid;
+  border-bottom: 5px transparent solid;
+  border-left: 5px #5cacde solid;
 }
 
 .chat-room .room-content .content-panel .panel-history .history-opposite {
   overflow: hidden;
   padding-top: 4px;
-  padding-right: 0;
   padding-bottom: 10px;
-  padding-left: 0;
 }
 
 .chat-room .room-content .content-panel .panel-history .history-opposite img {
@@ -323,8 +314,6 @@
   padding-bottom: 7px;
   padding-left: 12px;
   margin-top: 5px;
-  margin-right: 0;
-  margin-bottom: 0;
   margin-left: 10px;
   border-radius: 8px;
   color: #6b8299;
@@ -338,10 +327,10 @@
   right: 100%;
   width: 0px;
   height: 0px;
-  border-top: 5px transparent dashed;
-  border-right: 5px transparent dashed;
-  border-bottom: 5px transparent dashed;
-  border-left: 0 transparent dashed;
+  border-top: 5px transparent solid;
+  border-right: 5px #eaeeef solid;
+  border-bottom: 5px transparent solid;
+  border-left: 5px transparent solid;
 }
 
 .chat-room .room-content .content-panel::-webkit-scrollbar {
@@ -359,9 +348,7 @@
   left: 0;
   height: 60px;
   width: 100%;
-  padding-top: 0;
   padding-right: 15px;
-  padding-bottom: 0;
   padding-left: 15px;
   background-color: #e5f4ff;
   border-radius: 0 0 5px 5px;
@@ -373,17 +360,107 @@
 .chat-room .room-content .content-send .send-telephone,
 .chat-room .room-content .content-send .send-video {
   float: left;
+  position: relative;
   width: 30px;
   height: 30px;
   vertical-align: middle;
   position: relative;
-  margin-right: 2px;
   margin-top: 15px;
+  margin-right: 2px;
   cursor: pointer;
 }
 
 .chat-room .room-content .content-send .send-expression {
   background: url(../../../../static/img/icons.png) no-repeat 2px -187px;
+}
+
+.chat-room .room-content .content-send .send-expression .expression-package {
+  position: absolute;
+  bottom: 13px;
+  left: 26px;
+  z-index: 100;
+  width: 500px;
+  height: 350px;
+  border: 1px solid #ccc;
+}
+
+.chat-room .room-content .content-send .send-expression .expression-package .package-content {
+  width: 100%;
+  height: 300px;
+  background: #fff;
+  overflow-y: auto;
+}
+
+.chat-room .room-content .content-send .send-expression .expression-package .package-content .content-emoji,
+.chat-room .room-content .content-send .send-expression .expression-package .package-content .content-chicken,
+.chat-room .room-content .content-send .send-expression .expression-package .package-content .content-bear,
+.chat-room .room-content .content-send .send-expression .expression-package .package-content .content-rabbit {
+  display: none;
+  width: 490px;
+  height: auto;
+}
+
+.chat-room .room-content .content-send .send-expression .expression-package .package-content .content-emoji span,
+.chat-room .room-content .content-send .send-expression .expression-package .package-content .content-chicken span,
+.chat-room .room-content .content-send .send-expression .expression-package .package-content .content-bear span,
+.chat-room .room-content .content-send .send-expression .expression-package .package-content .content-rabbit span {
+  float: left;
+  display: inline-block;
+  width: 75px;
+  height: auto;
+  padding: 10px;
+  background: #fff;
+  border-right: #eee 1px solid;
+  border-bottom: #eee 1px solid;
+  cursor: pointer;
+}
+
+.chat-room .room-content .content-send .send-expression .expression-package .package-content .content-emoji span img,
+.chat-room .room-content .content-send .send-expression .expression-package .package-content .content-chicken span img,
+.chat-room .room-content .content-send .send-expression .expression-package .package-content .content-bear span img,
+.chat-room .room-content .content-send .send-expression .expression-package .package-content .content-rabbit span img {
+  width: 100%;
+  height: 100%;
+}
+
+.chat-room .room-content .content-send .send-expression .expression-package .package-content .content-emoji span {
+  width: 19px;
+}
+
+.chat-room .room-content .content-send .send-expression .expression-package .package-content .Show {
+  display: block;
+}
+
+.chat-room .room-content .content-send .send-expression .expression-package .package-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-room .room-content .content-send .send-expression .expression-package .package-content::-webkit-scrollbar-thumb {
+  background-color: #8899A7;
+  border-radius: 3px;
+}
+
+.chat-room .room-content .content-send .send-expression .expression-package .package-tab {
+  width: 100%;
+  height: 50px;
+  background: #f0f0f0;
+}
+
+.chat-room .room-content .content-send .send-expression .expression-package .package-tab .tab-item {
+  float: left;
+  height: 100%;
+  width: 50px;
+  cursor: pointer;
+}
+
+.chat-room .room-content .content-send .send-expression .expression-package .package-tab .tab-item img {
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+}
+
+.chat-room .room-content .content-send .send-expression .expression-package .package-tab .tabItemClick {
+  background: #fff;
 }
 
 .chat-room .room-content .content-send .send-picture {
@@ -403,8 +480,6 @@
   position: relative;
   width: 460px;
   margin-top: -5px;
-  margin-right: 0;
-  margin-bottom: 0;
   margin-left: 10px;
 }
 
@@ -414,9 +489,12 @@
   width: 440px;
   height: 24px;
   line-height: 24px;
-  padding: 6px 10px;
-  margin-right: 2px;
+  padding-top: 6px;
+  padding-right: 10px;
+  padding-bottom: 6px;
+  padding-left: 10px;
   margin-top: 15px;
+  margin-right: 2px;
   outline: none;
   border-radius: 5px;
   background: #fff;
@@ -450,6 +528,7 @@
   padding-left: 20px;
   font-size: 12px;
   color: #666;
+  cursor: pointer;
 }
 
 .chat-room .room-content .content-send .send-message .message-marked-list .item:hover {
@@ -464,7 +543,7 @@
   height: 34px;
   margin-top: 12px;
   margin-left: 15px;
-  line-height: 36px;
+  line-height: 32px;
   text-align: center;
   font-size: 12px;
   border: 1px solid #0070d9;
@@ -502,7 +581,7 @@
   text-align: center;
   line-height: 40px;
   background-color: #fff;
-  box-sizing: border-box;
+  border-sizing: border-box;
   border-top: 1px solid #ddd;
-  border-radius: 0px 0px 8px 8px;
+  border-radius: 0 0 8px 8px;
 }
