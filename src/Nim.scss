@@ -1,0 +1,13 @@
+@import "../dependencies/sass/_unit.scss";
+
+body{
+  $param: (flex flex) (alignItems center) (justifyContent space-between);
+  @include flexSet($param);
+}
+
+.nim-panel {
+  $param: (flex flex) (justifyContent space-between);
+  @include flexSet($param);
+  width: 1400px;
+  height: 650px;
+}

@@ -1,0 +1,23 @@
+<template>
+  <section class="chat-window" id="chat-window">
+    <MenuBar></MenuBar>
+    <Session></Session>
+    <InputArea></InputArea>
+  </section>
+</template>
+
+<script>
+import MenuBar from './menu-bar/menu-bar.vue'
+import Session from './session/session.vue'
+import InputArea from './input-area/input-area.vue'
+export default {
+  name: 'ChatWindow',
+  components: {
+    MenuBar
+  }
+}
+</script>
+
+<style lang="sass" scoped>
+@import "./chat-window.scss";
+</style>
