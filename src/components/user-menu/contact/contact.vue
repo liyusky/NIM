@@ -3,9 +3,11 @@
     <nav class="contact-nav">
       <div class="nav-item" @click="selectList('session')">
         <i></i>
+        <div class="item-arrow" v-show="listShow == 'session'"></div>
       </div>
       <div class="nav-item"  @click="selectList('friend')">
         <i></i>
+        <div class="item-arrow" v-show="listShow == 'friend'"></div>
       </div>
     </nav>
     <SessionList v-show="listShow == 'session'"></SessionList>
