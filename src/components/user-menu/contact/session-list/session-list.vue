@@ -3,12 +3,6 @@
     <li class="session-item">
       <div class="item-portraiture">
         <img src="">
-        <p>消息中心</p>
-      </div>
-    </li>
-    <li class="session-item">
-      <div class="item-portraiture">
-        <img src="">
         <p>添加好友</p>
       </div>
     </li>

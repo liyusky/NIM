@@ -1,9 +1,11 @@
 <template>
+  <!-- s 聊天区域 -->
   <section class="chat-window" id="chat-window">
     <MenuBar></MenuBar>
     <Session></Session>
     <InputArea></InputArea>
   </section>
+  <!-- e 聊天区域 -->
 </template>
 
 <script>
