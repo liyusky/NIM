@@ -1,1 +1,17 @@
-@import '../../../../dependencies/sass/_reset.scss';
+@import '../../../../dependencies/sass/_unit.scss';
+.contact{
+  width: 100%;
+  .contact-nav{
+    $param:(flex flex) (alignItems center);
+    @include flexSet($param);
+    width: 100%;
+    height: 34px;
+    border-bottom: 1px solid #ced4d9;
+    .nav-item{
+      width: 50%;
+      height: 34px;
+      background: red;
+    }
+  }
+
+}

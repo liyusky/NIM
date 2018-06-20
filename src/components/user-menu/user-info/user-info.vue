@@ -21,6 +21,7 @@ export default {
   name: 'UserInfo',
   data () {
     return {
+      accountName: '',
       userInfoShow: false,
       searchCondition: ''
     }
