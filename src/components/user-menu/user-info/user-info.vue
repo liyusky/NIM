@@ -3,7 +3,7 @@
   <section class="user-info">
     <div class="info-account">
       <div class="account-portrait">
-        <img src="">
+        <img src="../../../../static/img/default-icon.png">
       </div>
       <span class="account-name">{{accountName}}</span>
       <i @click="showUserInfo"></i>
@@ -33,6 +33,6 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-@import './user-info.scss'
+<style lang="scss" scoped>
+@import './user-info.scss';
 </style>
