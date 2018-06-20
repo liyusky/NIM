@@ -27,7 +27,8 @@
   position: relative;
   height: 50px;
   line-height: 50px;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: #e5f4ff;
   border-bottom: 1px solid #ced4d9;
 }
@@ -52,13 +53,21 @@
 .select-technology .technology-contnet .content-select {
   width: 90%;
   margin: 0 auto;
-  padding: 10px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
 }
 
 .select-technology .technology-contnet .content-select .select-title {
   text-align: center;
   font-size: 18px;
-  margin: 10px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-weight: bold;
 }
 
@@ -182,12 +191,14 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 22px 0;
+  padding-top: 22px;
+  padding-bottom: 22px;
   border-top: 1px solid #ddd;
   background: #fff;
 }
 
 .select-technology .technology-contnet .content-sure .sure-button {
+  display: block;
   width: 100px;
   height: 34px;
   line-height: 34px;
@@ -198,4 +209,5 @@
   border-radius: 5px;
   background-color: #0888ff;
   border: 1px solid #0070d9;
+  cursor: pointer;
 }

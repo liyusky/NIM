@@ -18,7 +18,7 @@
           </div>
           <div class="header-search">
             <span class="search-icon"></span>
-            <input v-model="searchText" class="search-input" id="search-input" type="text" placeholder="搜索" @input="searchContact">
+            <input v-model="searchText" class="search-input" id="search-input" type="text" placeholder="搜索" @input="searchContactEvent">
           </div>
         </header>
         <!-- e header -->
@@ -54,7 +54,7 @@
           <div class="section-panel">
             <!-- s panel-message -->
             <div class="panel-message" :class="{show:!imgOnoff}">
-              <div class="message-item">
+              <div class="message-item" @click="showMessageCenterEvent">
                 <img src="../../static/img/notice.png">
                 <span>消息中心</span>
               </div>
@@ -62,21 +62,25 @@
                 <img src="../../static/img/addFriend.png">
                 <span>添加好友</span>
               </div>
-              <div v-show="messageShow" class="message-accept">
-                <div class="accept-item">
-                  <img class="item-portrait" src="../../static/img/default-icon.png">
-                  <div class="item-detail">
-                    <p class="detail-title">
-                      <span class="title-username">用户名字</span>
-                      <span class="title-time">一天前</span>
-                    </p>
-                    <p class="detail-news">
-                      <span class="news-content">hello</span>
-                    </p>
+
+              <div class="message-accept" v-show="acceptShow">
+                <div v-show="messageShow" class="accept-list">
+                  <div class="list-item" @click="chatRoomtoggleEvent">
+                    <img class="item-portrait" src="../../static/img/default-icon.png">
+                    <div class="item-detail">
+                      <p class="detail-title">
+                        <span class="title-username">用户名字</span>
+                        <span class="title-time">一天前</span>
+                      </p>
+                      <p class="detail-news">
+                        <span class="news-content">hello</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
+                <div v-show="!messageShow" class="accept-no-contact">暂无最近联系人哦</div>
               </div>
-              <div v-show="!messageShow" class="message-no-contact">暂无最近联系人哦</div>
+
             </div>
             <!-- e panel-message -->
             <!-- s panel-message -->
@@ -101,13 +105,16 @@
     </div>
     <!-- e container -->
     <information v-show="informationShow" @closeInformation="closeInfor"></information>
-    <chatroom></chatroom>
+    <chatroom v-show="chatRoomShow"></chatroom>
+    <messagecenter v-show="messageCenterShow" @closeEvent="CloseMessageCenterEvent"></messagecenter>
+
   </div>
   <!-- e home -->
 </template>
 <script>
   import information from '@/components/common/information/information'
   import chatroom from '@/components/common/chat-room/chat-room'
+  import messagecenter from '@/components/common/message-center/message-center'
   export default {
     name: 'index',
     data() {
@@ -117,8 +124,11 @@
         imgOnoff: true,
         informationShow: false,
         shadeShow: false,
-        searchText:'',
-        messageShow:true
+        searchText: '',
+        messageShow: true,
+        chatRoomShow: false,
+        acceptShow: true,
+        messageCenterShow: false,
       }
     },
     methods: {
@@ -146,13 +156,28 @@
         this.shadeShow = true;
       },
       // 搜索联系人
-      searchContact(){
-        
+      searchContactEvent() {
+        if (this.searchText == '') {
+          this.acceptShow = true;
+        } else {
+          this.acceptShow = false;
+        }
       },
+      // 显示隐藏聊天界面
+      chatRoomtoggleEvent() {
+        this.chatRoomShow = !this.chatRoomShow;
+      },
+      showMessageCenterEvent() {
+        this.messageCenterShow = true;
+      },
+      CloseMessageCenterEvent() {
+        this.messageCenterShow = false;
+      }
     },
     components: {
       information,
-      chatroom
+      chatroom,
+      messagecenter
     }
   }
 
@@ -161,4 +186,5 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   @import './scss/home/home.scss';
+
 </style>
