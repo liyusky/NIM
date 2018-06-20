@@ -8,7 +8,7 @@
     </li>
     <li class="friend-item" v-for="friend in friends" :key="friend.phone">
       <div class="item-portraiture">
-        <img src="{{friend.portraiture}}">
+        <img :src="friend.portraiture">
         <p>{{friend.name}}({{friend.phone}})[{{friend.status}}]</p>
       </div>
     </li>
@@ -26,7 +26,7 @@ export default {
           name: '',
           phone: '',
           status: ''
-        },
+        }
       ]
     }
   }

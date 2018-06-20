@@ -13,7 +13,9 @@ import InputArea from './input-area/input-area.vue'
 export default {
   name: 'ChatWindow',
   components: {
-    MenuBar
+    MenuBar,
+    Session,
+    InputArea
   }
 }
 </script>

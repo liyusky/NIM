@@ -8,7 +8,8 @@ export default {
   },
   data () {
     return {
-      listShow: 'session'
+      listShow: 'session',
+      arrow: 'arrow-session'
     }
   },
   methods: {

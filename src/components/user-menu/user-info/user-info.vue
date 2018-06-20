@@ -1,4 +1,5 @@
 <template>
+  <!-- s 头部 -->
   <section class="user-info">
     <div class="info-account">
       <div class="account-portrait">
@@ -12,6 +13,7 @@
       <input type="text" placeholder="请输入手机号或姓名" v-model="searchCondition">
     </div>
   </section>
+  <!-- e 头部 -->
 </template>
 
 <script>

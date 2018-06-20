@@ -4,10 +4,10 @@
 
 <script>
 export default {
-  name: 'Session'
+  name: 'Facebread'
 }
 </script>
 
 <style lang="sass" scoped>
-
+@import "./facebread.scss";
 </style>

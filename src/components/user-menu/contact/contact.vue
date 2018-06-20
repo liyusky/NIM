@@ -18,7 +18,6 @@
 <script>
 import Contact from './contact.js'
 export default Contact
-
 </script>
 
 <style lang="sass" scoped>

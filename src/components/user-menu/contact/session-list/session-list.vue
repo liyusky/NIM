@@ -14,7 +14,7 @@
     </li>
     <li class="session-item" v-for="session in sessions" :key="session.phone">
       <div class="item-portraiture">
-        <img src="{{session.portraiture}}">
+        <img :src="session.portraiture">
         <p>{{session.name}}({{session.phone}})[{{session.status}}]</p>
       </div>
     </li>
@@ -32,7 +32,7 @@ export default {
           name: '',
           phone: '',
           status: ''
-        },
+        }
       ]
     }
   }
