@@ -1,17 +1,66 @@
 @import '../../../../dependencies/sass/_unit.scss';
-.contact{
+.contact {
   width: 100%;
-  .contact-nav{
-    $param:(flex flex) (alignItems center);
+  .contact-nav {
+    $param: (flex flex) (alignItems center);
     @include flexSet($param);
     width: 100%;
     height: 34px;
     border-bottom: 1px solid #ced4d9;
-    .nav-item{
+    .nav-item {
+      $param: (flex flex) (alignItems center) (justifyContent center);
+      @include flexSet($param);
+      position: relative;
       width: 50%;
       height: 34px;
-      background: red;
+      i {
+        display: block;
+        width: 16px;
+        height: 16px;
+      }
+      .item-arrow {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        .badge-bottom {
+          position: relative;
+          .badge-top {
+            position: absolute;
+            left: -7px;
+            top: -12px;
+            z-index: 2;
+            width: 14px;
+            height: 14px;
+          }
+          .top-arrow-first,
+          .top-arrow-second {
+            width: 0;
+            height: 0;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 5;
+            border: {
+              top: 6px transparent dashed;
+              left: 6px transparent dashed;
+              right: 6px transparent dashed;
+            }
+            overflow: hidden;
+          }
+          .top-arrow-first {
+            border: {
+              bottom: 6px #ced4d9 solid;
+            }
+          }
+          .top-arrow-second {
+            top: 1px;
+            border: {
+              bottom: 6px white solid;
+            }
+          }
+        }
+      }
     }
   }
-
 }
