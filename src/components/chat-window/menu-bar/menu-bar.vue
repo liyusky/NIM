@@ -4,12 +4,12 @@
     <div class="bar-default" v-show="barShow == 'default'">
       <div class="default-account">
         <div class="account-portrait">
-          <img src="">
+          <img src="../../../../static/img/default-icon.png">
         </div>
         <p class="account-name">{{accountName}}[{{loginStatus}}]</p>
       </div>
       <button class="default-record" @click="toggleBarShow">
-        <img src="">
+        <img src="../../../../static/img/recode.png">
         <p>云记录</p>
       </button>
     </div>
