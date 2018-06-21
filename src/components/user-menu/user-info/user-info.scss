@@ -1,0 +1,60 @@
+@import '../../../../dependencies/sass/_flex.scss';
+.user-info {
+    width: 100%;
+    height: 110px;
+    padding: {
+        left: 6px;
+        right: 6px;
+    }
+    background: #e5f4ff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    
+  .info-account {
+    $param: (flex flex) (alignItems center);
+    @include flexSet($param);
+    height: 80px;
+    padding: {
+        left: 14px;
+    }
+    .account-portrait{
+        width: 56px;
+        height: 56px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .account-name{
+        font-size: 14px;
+        color: #333;
+        margin: {
+            left:10px;
+        }
+    }
+  }
+  .info-search{
+    $param: (flex flex) (alignItems center);
+    @include flexSet($param);
+    width: 248px;
+    height: 22px;
+    border: 1px solid #1bb8f9;
+    i{
+        display:block;
+        width: 30px;
+        height: 22px;
+    }
+    input{
+        width: 218px;
+        height: 20px;
+        padding: {
+            left: 10px;
+        }
+        box-sizing: border-box;
+        border: none;
+        line-height: 20px;
+        font-size: 12px;
+        outline: none;
+    }
+  }
+}
