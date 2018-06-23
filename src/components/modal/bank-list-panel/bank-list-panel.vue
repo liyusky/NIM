@@ -10,7 +10,7 @@
       <span>你不会接收到列表中联系人的任何消息</span>
     </p>
     <ul class="panel-list">
-      <li class="list-item" v-for="customer in blacklist" :key="customer.account">
+      <li class="list-item" v-for="(customer,index) in blacklist" :key="index">
         <div class="item-account">
           <div class="account-portrait">
             <img :src="customer.portrait">

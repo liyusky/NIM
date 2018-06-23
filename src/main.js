@@ -19,6 +19,6 @@ new Vue({
 })
 
 new Vue({
-  el: '#backstage',
+  el: '#modal',
   render: f => f(Modal)
 })

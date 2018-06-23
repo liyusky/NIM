@@ -1,0 +1,30 @@
+@import '../../../../../../dependencies/sass/_flex.scss';
+.rooster-list {
+  width: 100%;
+  height: 300px;
+  padding: {
+    bottom: 1px;
+  }
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #8899A7;
+    border-radius: 3px;
+  }
+  .list-item {
+    float: left;
+    width: 96px;
+    height: 96px;
+    padding: 11px;
+    border: {
+      right: 1px solid #eee;
+      bottom: 1px solid #eee;
+    }
+    img {
+      width: 75px;
+      height: 75px;
+    }
+  }
+}

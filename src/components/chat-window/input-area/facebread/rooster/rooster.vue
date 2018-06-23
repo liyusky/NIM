@@ -2,7 +2,7 @@
   <!-- s 鸡表情包列表 -->
   <ul class="rooster-list">
     <li class="list-item" v-for="index in count" :key="index">
-      <img src="">
+      <img src="../../../../../../static/img/lt/lt001.png">
     </li>
   </ul>
   <!-- e 鸡表情包列表 -->
@@ -13,7 +13,7 @@ export default {
   name: 'RoosterFacebread',
   data () {
     return {
-      count: 20
+      count: 40
     }
   }
 }

@@ -3,18 +3,18 @@
   <section class="image-message">
     <div class="message-waiter" v-if="session.account == account">
       <div class="waiter-say">
-        <img src="">
+        <img src="../../../../../static/img/10383519.jpg">
       </div>
       <div class="waiter-portrait">
-        <img src="">
+        <img src="../../../../../static/img/default-icon.png">
       </div>
     </div>
     <div class="message-customer" v-else>
       <div class="customer-portrait">
-        <img src="">
+        <img src="../../../../../static/img/jietiao.jpg">
       </div>
       <div class="customer-say">
-        <img src="">
+        <img src="../../../../../static/img/jietiao.jpg">
       </div>
     </div>
   </section>

@@ -2,14 +2,20 @@
   <!-- s 欠条详情面板 -->
   <section class="iou-panel">
     <div class="panel-title">
-      <p class="title-name">
-        <i></i>
+      <div class="title-name">
+        <div class="name-logo">
+          <img src="../../../../../static/img/Loan.png">
+        </div>
         <span>欠条详情</span>
-      </p>
-      <i></i>
+      </div>
+      <div class="title-close">
+        <img src="../../../../../static/img/closebtn.png">
+      </div>
     </div>
     <div class="panel-status">
-      <i></i>
+      <div class="status-img">
+        <img src="../../../../../static/img/overdue.png">
+      </div>
       <p>{{session.status}}</p>
       <p>¥{{session.price}}</p>
     </div>

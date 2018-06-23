@@ -1,0 +1,70 @@
+@import '../../../../dependencies/sass/_flex.scss';
+.portrait-upload-panel {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 100;
+  width: 400px;
+  padding: {
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+  }
+  background-color: #fff;
+  transform: translateX(-50%) translateY(-50%);
+  .panel-title {
+    margin: {
+      bottom: 20px;
+    }
+    font-size: 12px;
+    color:#333;
+  }
+  .panel-show-portrait {
+    $param:(flex flex) (alignItems center) (justifyContent center);
+    @include flexSet($param);
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: #e4e9ee;
+    .portrait-select {
+      width: 98px;
+      height: 32px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+  .panel-operations{
+    $param:(flex flex) (alignItems center) (justifyContent space-around);
+    @include flexSet($param);
+    width: 100%;
+    margin: {
+      top: 40px;
+    }
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+    .operations-cancel,
+    .operations-reselect{
+      width: 80px;
+      height: 32px;
+      border: 1px solid #ccc;
+      background-color: #eee;
+      color: #666;
+      outline: none;
+    }
+    .operations-save{
+      width: 80px;
+      height: 34px;
+      background-color: #0888ff;
+      border: 1px solid #0070d9;
+      border-radius: 5px;
+      color: #fff;
+      outline: none;
+    }
+  }
+}

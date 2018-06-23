@@ -2,7 +2,9 @@
   <!-- s 欠条消息 -->
   <section class="iou-message">
     <div class="message-detail">
-      <i></i>
+      <div class="detail-icon">
+        <img src="../../../../../static/img/credit.png">
+      </div>
       <p class="detail-price">{{session.price}}元</p>
     </div>
     <div class="message-origin">借条大师-欠条</div>
@@ -13,6 +15,7 @@
 <script>
 export default {
   name: 'IOUMessage',
+  props: ['session'],
   data () {
     return {}
   }

@@ -2,7 +2,7 @@
   <!-- s 兔表情包列表 -->
   <ul class="rabbit-list">
     <li class="list-item" v-for="index in count" :key="index">
-      <img src="">
+      <img src="../../../../../../static/img/ajmd/ajmd001.png">
     </li>
   </ul>
   <!-- e 兔表情包列表 -->

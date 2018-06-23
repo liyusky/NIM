@@ -12,7 +12,7 @@
         <BusinessCardMessage v-else-if="session.type == '名片'" :session="session"></BusinessCardMessage>
       </li>
     </ul>
-    <CreditPanel v-show="showCreditPanel"></CreditPanel>
+    <CreditPanel v-show="showIOUPanel"></CreditPanel>
     <IOUPanel v-show="showIOUPanel"></IOUPanel>
     <ReceiptPanel v-show="showReceiptPanel"></ReceiptPanel>
   </section>

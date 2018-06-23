@@ -2,15 +2,21 @@
   <!-- s 借条详情面板 -->
   <section class="receipt-panel">
     <div class="panel-title">
-      <p class="title-name">
-        <i></i>
+      <div class="title-name">
+        <div class="name-logo">
+          <img src="../../../../../static/img/Loan.png">
+        </div>
         <span>借条详情</span>
-      </p>
-      <i></i>
+      </div>
+      <div class="title-close">
+        <img src="../../../../../static/img/closebtn.png">
+      </div>
     </div>
     <div class="panel-status">
-      <i></i>
-      <p>{{session.status}}</p>
+      <div class="status-img">
+        <img src="../../../../../static/img/overdue.png">
+      </div>
+      <p class="status-select">{{session.status}}</p>
       <p>¥{{session.price}}</p>
     </div>
     <div class="panel-detail">
@@ -34,8 +40,10 @@ export default {
     return {}
   }
 }
+
 </script>
 
 <style lang="sass" scoped>
-  @import "./receipt-panel.scss";
+@import "./receipt-panel.scss";
+
 </style>
