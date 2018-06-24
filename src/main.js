@@ -1,24 +1,24 @@
-
 import Vue from 'vue'
 import Nim from './Nim.vue'
 import Backstage from './components/backstage/backstage.vue'
 import Modal from './components/modal/modal.vue'
+import Chat from './class/chat.class'
 import './main.scss'
 
 Vue.config.productionTip = false
-
 /* eslint-disable no-new */
-new Vue({
-  el: '#nim',
-  render: f => f(Nim)
-})
+new Chat('15921769360', '015c3d9608b4e414b8bfed58fc397fac')
 
-new Vue({
-  el: '#backstage',
-  render: f => f(Backstage)
-})
+const VueMap = new Map([
+  ['nim', Nim],
+  ['backstage', Backstage],
+  ['modal', Modal]
+])
 
-new Vue({
-  el: '#backstage',
-  render: f => f(Modal)
+VueMap.forEach((module, name) => {
+  /* eslint-disable no-new */
+  new Vue({
+    el: '#' + name,
+    render: f => f(module)
+  })
 })
