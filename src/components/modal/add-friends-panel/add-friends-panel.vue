@@ -6,9 +6,9 @@
       <i></i>
     </div>
     <div class="panel-content">
-      <p class="content-tip" v-show="showTip"></p>
+      <p class="content-tip" v-show="showTip">该帐号不存在，请检查你输入的帐号是否正确</p>
       <div class="content-input" v-show="showInput">
-        <input type="number" v-model="account">
+        <input type="text" v-model="account" placeholder="请输入账号">
       </div>
       <div class="content-detail" v-show="showDetail">
         <div class="detail-portrait">

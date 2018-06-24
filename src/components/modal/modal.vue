@@ -1,11 +1,11 @@
 <template>
   <!-- s 模态框 -->
-  <section class="model">
-    <AddFriendsPanel></AddFriendsPanel>
-    <BankListPanel></BankListPanel>
-    <CustomerInfoPanel></CustomerInfoPanel>
-    <MagnifyingGlassPanel></MagnifyingGlassPanel>
-    <PortraitUploadPanel></PortraitUploadPanel>
+  <section class="modal">
+    <AddFriendsPanel v-show="false"></AddFriendsPanel>
+    <BankListPanel v-show="false"></BankListPanel>
+    <CustomerInfoPanel v-show="false"></CustomerInfoPanel>
+    <MagnifyingGlassPanel v-show="false"></MagnifyingGlassPanel>
+    <PortraitUploadPanel v-show="false"></PortraitUploadPanel>
   </section>
   <!-- e 模态框 -->
 </template>

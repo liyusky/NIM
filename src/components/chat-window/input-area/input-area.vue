@@ -11,7 +11,7 @@
       </div>
       <!-- e 左边发表情等 -->
       <div class="operation-edit">
-        <input type="text" @focus="openShortcut" @blur="closeShortcut">
+        <input class="edit-input" type="text" @focus="openShortcut" @blur="closeShortcut">
         <!-- s 快捷短语 -->
         <div class="operation-shortcut" v-show="shortcutStatus">
           <ul class="shortcut-list">

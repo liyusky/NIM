@@ -2,11 +2,15 @@
   <!-- s 信用报告面板 -->
   <section class="credit-panel">
     <div class="panel-title">
-      <p class="title-name">
-        <i></i>
+      <div class="title-name">
+        <div class="name-logo">
+          <img src="../../../../../static/img/credit.png">
+        </div>
         <span>信用报告</span>
-      </p>
-      <i></i>
+      </div>
+      <div class="title-close">
+        <img src="../../../../../static/img/closebtn.png">
+      </div>
     </div>
     <div class="panel-customer-info">
       <p>个人基本信息</p>

@@ -3,6 +3,6 @@
 .nim-panel {
   $param: (flex flex) (justifyContent space-between);
   @include flexSet($param);
-  width: 1400px;
+  width: 1100px;
   height: 650px;
 }

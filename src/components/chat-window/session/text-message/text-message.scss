@@ -1,0 +1,104 @@
+@import '../../../../../dependencies/sass/_flex.scss';
+.text-message {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: {
+    top: 4px;
+    bottom: 10px;
+  }
+  .message-waiter {
+    $param: (flex flex) (alignItems flex-start) (justifyContent flex-end);
+    @include flexSet($param);
+    width: 100%;
+    height: 100%;
+    .waiter-say {
+      position: relative;
+      max-width: 290px;
+      line-height: 20px;
+      margin: {
+        top: 5px;
+        right: 15px;
+      }
+      padding: {
+        top: 7px;
+        bottom: 7px;
+        left: 12px;
+        right: 12px;
+      }
+      background: #5cacde;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #fff;
+      &::before {
+        position: absolute;
+        right: -10px;
+        top: 11px;
+        z-index: 10;
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent transparent #5cacde;
+      }
+    }
+    .waiter-portrait {
+      height: 40px;
+      width: 40px;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+  }
+  .message-customer {
+    $param: (flex flex) (alignItems flex-start) (justifyContent flex-start);
+    @include flexSet($param);
+    width: 100%;
+    height: 100%;
+    .customer-say {
+      position: relative;
+      max-width: 290px;
+      line-height: 20px;
+      margin: {
+        top: 5px;
+        left: 15px;
+      }
+      padding: {
+        top: 7px;
+        bottom: 7px;
+        left: 12px;
+        right: 12px;
+      }
+      background: #5cacde;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #fff;
+      &::after {
+        position: absolute;
+        left: -10px;
+        top: 11px;
+        z-index: 10;
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent #5cacde transparent transparent;
+      }
+    }
+    .customer-portrait {
+      height: 40px;
+      width: 40px;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+  }
+}

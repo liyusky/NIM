@@ -2,7 +2,7 @@
   <!-- s 小表情包列表 -->
   <ul class="small-list">
     <li class="list-item" v-for="index in count" :key="index">
-      <img src="">
+      <img src="../../../../../../static/img/emoji_0.png">
     </li>
   </ul>
   <!-- e 小表情包列表 -->
@@ -13,7 +13,7 @@ export default {
   name: 'SmallFacebread',
   data () {
     return {
-      count: 20
+      count: 120
     }
   }
 }
