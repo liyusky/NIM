@@ -6,7 +6,7 @@
         <img :src="session.portrait">
       </div>
       <div class="detail-archives">
-        <p class="archives-name"></p>
+        <p class="archives-name">欧冰倩</p>
         <p class="archives-id">
           <span>账号：</span>
           <span>{{session.account}}</span>
@@ -21,6 +21,7 @@
 <script>
 export default {
   name: 'BusinessCardMessage',
+  props: ['session'],
   data () {
     return {}
   }

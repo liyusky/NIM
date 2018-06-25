@@ -2,7 +2,7 @@
   <!-- s 狗表情包列表 -->
   <ul class="dog-list">
     <li class="list-item" v-for="index in count" :key="index">
-      <img src="">
+      <img src="../../../../../../static/img/xxy/xxy001.png">
     </li>
   </ul>
   <!-- e 狗表情包列表 -->

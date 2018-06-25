@@ -3,7 +3,7 @@
   <section class="customer-info-panel">
     <div class="panel-header">
       <div class="header-portrait">
-        <img :src="information.portrait">
+        <img src="../../../../static/img/default-icon.png">
       </div>
       <div class="header-detail">
         <p>{{portrait.name}}</p>
@@ -14,7 +14,7 @@
       <p>黑名单</p>
       <div class="blacklist-btn-group">
         <i></i>
-        <input type="checkbox" v-model="checked">
+        <input type="checkbox" :checked="checked">
       </div>
     </div>
     <button class="panel-remove-friend">删除好友</button>
@@ -25,10 +25,14 @@
 <script>
 export default {
   name: 'CustomerInfoPanel',
-  props: ['information'],
+  // props: ['information'],
   data () {
     return {
-      checked: false
+      checked: false,
+      portrait: {
+        name: 'hello',
+        account: 1234
+      }
     }
   }
 }

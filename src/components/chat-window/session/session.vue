@@ -2,7 +2,7 @@
   <!-- s 聊天内容 -->
   <section class="session">
     <ul class="session-list">
-      <li class="list-item" v-for="(index, session) in sessions" :key="index">
+      <li class="list-item" v-for="(session, index) in sessions" :key="index">
         <TextMessage v-if="session.type == 'text'" :session="session"></TextMessage>
         <ImageMessage v-else-if="session.type == 'image'" :session="session"></ImageMessage>
         <ReceiptMessage v-else-if="session.type == '借条'" :session="session"></ReceiptMessage>
@@ -12,7 +12,7 @@
         <BusinessCardMessage v-else-if="session.type == '名片'" :session="session"></BusinessCardMessage>
       </li>
     </ul>
-    <CreditPanel v-show="showCreditPanel"></CreditPanel>
+    <CreditPanel v-show="showIOUPanel"></CreditPanel>
     <IOUPanel v-show="showIOUPanel"></IOUPanel>
     <ReceiptPanel v-show="showReceiptPanel"></ReceiptPanel>
   </section>

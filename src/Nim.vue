@@ -1,8 +1,8 @@
 <template>
   <section class="nim-panel">
     <UserMenu></UserMenu>
-    <ChatWindow></ChatWindow>
-    <CreditReport></CreditReport>
+    <!-- <ChatWindow></ChatWindow> -->
+    <!-- <CreditReport></CreditReport> -->
   </section>
 </template>
 
