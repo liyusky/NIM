@@ -5,7 +5,7 @@
       <div class="account-portrait">
         <img src="../../../../static/img/default-icon.png">
       </div>
-      <span class="account-name">{{accountName}}</span>
+      <span class="account-name">{{user.nick}}</span>
       <i @click="showUserInfo"></i>
     </div>
     <div class="info-search">
@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   name: 'UserInfo',
   data () {
@@ -25,6 +26,9 @@ export default {
       userInfoShow: false,
       searchCondition: ''
     }
+  },
+  computed: {
+    ...mapState(['user'])
   },
   methods: {
     showUserInfo () {
