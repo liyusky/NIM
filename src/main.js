@@ -4,6 +4,7 @@ import Backstage from './components/backstage/backstage.vue'
 import Modal from './components/modal/modal.vue'
 import Chat from './class/chat.class'
 import './main.scss'
+import store from './store/index'
 
 Vue.config.productionTip = false
 /* eslint-disable no-new */
@@ -19,6 +20,7 @@ VueMap.forEach((module, name) => {
   /* eslint-disable no-new */
   new Vue({
     el: '#' + name,
+    store,
     render: f => f(module)
   })
 })
